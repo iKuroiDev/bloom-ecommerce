@@ -2,7 +2,7 @@
   <div class="container">
     <p>
       Este é um teste técnico realizado para o projeto Bloom. 2023, by
-      <a href="https://kuroi.com.br">Jéssica Fraga</a>.
+      <a href="https://kuroi.com.br" target="_blank">Jéssica Fraga</a>.
     </p>
     <p>
       <a
