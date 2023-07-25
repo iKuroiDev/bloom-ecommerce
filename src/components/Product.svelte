@@ -4,7 +4,7 @@
   </div>
   <div class="product__info">
     <div class="product__category">Treino & Academia</div>
-    <h3 class="product__name">Tênis Nike Air Max Bla bla bla</h3>
+    <h3 class="product__name">Tênis Nike Air Max Alpha Trainer 5 Masculino</h3>
     <div class="product__price">R$ 719,99</div>
     <div class="product__btn">
       <button> Comprar </button>
@@ -39,7 +39,7 @@
 
   .product__name {
     margin: 10px 0;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .product__price {
