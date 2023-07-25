@@ -22,7 +22,7 @@
     background-color: #443f52;
     color: #fff;
     text-align: center;
-    padding: 30px 15px;
+    padding: 30px 25px;
   }
 
   .footer__icon {
