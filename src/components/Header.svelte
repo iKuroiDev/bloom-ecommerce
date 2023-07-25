@@ -18,8 +18,8 @@
 
 <style>
   .header {
-    padding: 9px 25px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 12px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.09);
   }
 
   .header__wrapper {

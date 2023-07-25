@@ -7,7 +7,11 @@
 <div class="content">
   <Header />
   <!-- page content -->
-  <slot />
+  <section class="page">
+    <div class="container">
+      <slot />
+    </div>
+  </section>
 
   <Footer />
 </div>
@@ -17,5 +21,9 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  .page {
+    margin: 60px 0;
   }
 </style>

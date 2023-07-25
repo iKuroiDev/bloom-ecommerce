@@ -4,7 +4,7 @@ teste: https://docs.google.com/presentation/d/1gci8_gTTeGLYtJLCple_58uAnWyXBSLdY
 
 Prazo: 28/07 - até 23:59
 
-☐ criar layout da navbar 
+✔ criar layout da navbar @done(23-07-25 18:13)
 ☐ desenvolver layout tela de produtos
     incluir nome e preço
 ☐ desenvolver layout tela de carrinho
@@ -14,3 +14,7 @@ Prazo: 28/07 - até 23:59
 ☐ calcular valor total da compra
 ☐ publicar no github
 ☐ deployar na vercel
+
+Extras (se der tempo): 
+☐ barra de busca
+☐ filtro
