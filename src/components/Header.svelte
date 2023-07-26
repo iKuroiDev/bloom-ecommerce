@@ -1,3 +1,14 @@
+<script>
+  import { cart } from "../stores/cartStore";
+
+  let cartLength = 0;
+
+  const unsubscribe = cart.subscribe((res) => {
+    cartLength = 0;
+    res.forEach((item) => (cartLength += item.quantity));
+  });
+</script>
+
 <header class="header">
   <div class="container">
     <div class="header__wrapper">
@@ -9,7 +20,7 @@
       <div class="header__cart">
         <a href="/carrinho">
           <img src="img/cart.svg" alt="Cart (1)" />
-          <div class="header__cart-badge">80</div>
+          <div class="header__cart-badge">{cartLength}</div>
         </a>
       </div>
     </div>

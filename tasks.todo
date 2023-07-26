@@ -7,12 +7,13 @@ Prazo: 28/07 - até 23:59
 ✔ criar layout da navbar @done(23-07-25 18:13)
 ✔ desenvolver layout tela de produtos @done(23-07-25 18:47)
     incluir nome e preço
-☐ 
-☐ desenvolver layout tela de carrinho
-☐ criar store do carrinho
-☐ adicionar produtos ao carrinho
+✔ desenvolver layout tela de carrinho @done(23-07-25 19:35)
+✔ criar obj para listagem dos produtos @done(23-07-26 10:11)
+✔ criar store do carrinho @done(23-07-26 12:34)
+✔ adicionar produtos ao carrinho @done(23-07-26 12:34)
+☐ aumentar/reduzir qtde de produtos no carrinho
 ☐ remover produtos do carrinho
-☐ calcular valor total da compra
+✔ calcular valor total da compra @done(23-07-26 12:34)
 ☐ responsividade
 ☐ publicar no github
 ☐ deployar na vercel
@@ -20,3 +21,5 @@ Prazo: 28/07 - até 23:59
 Extras (se der tempo): 
 ☐ barra de busca
 ☐ filtro
+☐ notificação de produto adicionado ao carrinho
+☐ notificação de produto removido do carrinho

@@ -1,22 +1,32 @@
+<script>
+  import { createEventDispatcher } from "svelte";
+
+  export let data = null;
+
+  const dispatch = createEventDispatcher();
+</script>
+
 <div class="cart__item">
   <div class="cart__thumb">
-    <img src="img/product-1.png" alt="Product 1" />
+    <img src={data.img} alt={data.name} />
   </div>
   <h2 class="cart__name align-items-center">
-    Tênis Nike Air Max Alpha Trainer 5 Masculino
+    {data.name}
   </h2>
   <div class="cart__quantity align-items-center">
     <div class="align-items-center">
-      <button class="cart__button">
+      <button class="cart__button" on:click={() => dispatch("removeItem")}>
         <img src="img/minus-icon.svg" alt="Remover 1" />
       </button>
-      <span class="cart__quantity_label"> 80 </span>
-      <button class="cart__button">
+      <span class="cart__quantity_label"> {data.quantity} </span>
+      <button class="cart__button" on:click={() => dispatch("addItem")}>
         <img src="img/plus_icon.svg" alt="Adicionar 1" />
       </button>
     </div>
   </div>
-  <h1 class="cart__price align-items-center">R$ 719,99</h1>
+  <h1 class="cart__price align-items-center">
+    R$ {data.price * data.quantity}
+  </h1>
 </div>
 
 <style>

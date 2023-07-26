@@ -1,11 +1,46 @@
+<!-- HOME/PRODUCT PAGE -->
 <script>
   import Product from "../components/Product.svelte";
+  import { addItem } from "../stores/cartStore.js";
+  import { cart } from "../stores/cartStore.js";
+
+  const products = [
+    {
+      id: 1,
+      name: "Tênis Nike Air Max Alpha Trainer 5 Masculino",
+      category: "Treino & Academia",
+      price: 719.99,
+      img: "img/product-1.png",
+    },
+    {
+      id: 2,
+      name: "Tênis Nike Pegasus Turbo Next Nature Masculino",
+      category: "Corrida",
+      price: 519.99,
+      img: "img/product-2.png",
+    },
+    {
+      id: 3,
+      name: "Tênis Nike Downshifter 12 Masculino",
+      category: "Caminhada",
+      price: 249.99,
+      img: "img/product-3.png",
+    },
+  ];
+
+  function addToCart(item) {
+    addItem(item);
+  }
+
+  const unsubscribe = cart.subscribe((res) => {
+    console.log(res);
+  });
 </script>
 
 <div class="product-grid">
-  <Product />
-  <Product />
-  <Product />
+  {#each products as product}
+    <Product data={product} on:addItem={(event) => addToCart(event.detail)} />
+  {/each}
 </div>
 
 <style>

@@ -1,13 +1,21 @@
+<script>
+  import { createEventDispatcher } from "svelte";
+
+  export let data = null;
+
+  const dispatch = createEventDispatcher();
+</script>
+
 <article class="product">
   <div class="product__image">
-    <img src="img/product-1.png" alt="Product 1" />
+    <img src={data.img} alt={data.name} />
   </div>
   <div class="product__info">
-    <div class="product__category">Treino & Academia</div>
-    <h3 class="product__name">Tênis Nike Air Max Alpha Trainer 5 Masculino</h3>
-    <div class="product__price">R$ 719,99</div>
+    <div class="product__category">{data.category}</div>
+    <h3 class="product__name">{data.name}</h3>
+    <div class="product__price">R$ {data.price}</div>
     <div class="product__btn">
-      <button> Comprar </button>
+      <button on:click={() => dispatch("addItem", data)}> Comprar </button>
     </div>
   </div>
 </article>
