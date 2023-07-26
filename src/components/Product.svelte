@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { formatterCurrency } from "../utils/formatters";
 
   export let data = null;
 
@@ -13,7 +14,7 @@
   <div class="product__info">
     <div class="product__category">{data.category}</div>
     <h3 class="product__name">{data.name}</h3>
-    <div class="product__price">R$ {data.price}</div>
+    <div class="product__price">{formatterCurrency.format(data.price)}</div>
     <div class="product__btn">
       <button on:click={() => dispatch("addItem", data)}> Comprar </button>
     </div>

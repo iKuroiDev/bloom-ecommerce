@@ -5,8 +5,13 @@
 
   let total = 0;
 
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+  });
+
   const unsubscribe = cart.subscribe((res) => {
-    console.log("updated");
     getTotalPrice();
   });
 
@@ -29,13 +34,14 @@
         />
       {/each}
     </div>
-    <div class="cart__total">Total R$ {total}</div>
   {:else}
     <div class="cart__no-items">
-      <h3>Ainda não há items no seu carrinho.</h3>
-      <a href="/">Ir às compras!</a>
+      <h3>
+        Você ainda não tem produtos no carrinho, <a href="/"> ver produtos.</a>
+      </h3>
     </div>
   {/if}
+  <div class="cart__total">Total {formatter.format(total)}</div>
 </div>
 
 <style>

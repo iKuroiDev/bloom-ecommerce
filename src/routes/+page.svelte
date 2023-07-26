@@ -31,10 +31,6 @@
   function addToCart(item) {
     addItem(item);
   }
-
-  const unsubscribe = cart.subscribe((res) => {
-    console.log(res);
-  });
 </script>
 
 <div class="product-grid">

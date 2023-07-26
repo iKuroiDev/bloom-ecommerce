@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { formatterCurrency } from "../utils/formatters";
 
   export let data = null;
 
@@ -25,7 +26,7 @@
     </div>
   </div>
   <h1 class="cart__price align-items-center">
-    R$ {data.price * data.quantity}
+    {formatterCurrency.format(data.price * data.quantity)}
   </h1>
 </div>
 
