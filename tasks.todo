@@ -11,7 +11,7 @@ Prazo: 28/07 - até 23:59
 ✔ criar obj para listagem dos produtos @done(23-07-26 10:11)
 ✔ criar store do carrinho @done(23-07-26 12:34)
 ✔ adicionar produtos ao carrinho @done(23-07-26 12:34)
-☐ aumentar/reduzir qtde de produtos no carrinho
+✔ aumentar/reduzir qtde de produtos no carrinho @done(23-07-26 15:06)
 ☐ remover produtos do carrinho
 ✔ calcular valor total da compra @done(23-07-26 12:34)
 ☐ responsividade

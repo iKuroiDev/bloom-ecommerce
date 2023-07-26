@@ -18,6 +18,13 @@ export function addItem(item) {
     });
   }
 
+export function changeQuantity(item, num) {
+    cart.update(items => {
+        return items.map(i => 
+            i.id === item.id ? { ...i, quantity: i.quantity + num } : i
+        )
+    })
+}
 
 export function removeItem(item) {
     cart.update(items => items.filter(i => i.id !== item.id))

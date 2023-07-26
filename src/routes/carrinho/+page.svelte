@@ -1,12 +1,18 @@
 <!-- CART PAGE -->
 <script>
   import CartItem from "../../components/CartItem.svelte";
-  import { cart } from "../../stores/cartStore";
+  import { cart, changeQuantity, removeItem } from "../../stores/cartStore";
+
+  let total = 0;
+
+  const unsubscribe = cart.subscribe((res) => {
+    console.log("updated");
+    getTotalPrice();
+  });
 
   function getTotalPrice() {
-    let total = 0;
+    total = 0;
     $cart.forEach((item) => (total += item.price * item.quantity));
-    return total;
   }
 </script>
 
@@ -16,10 +22,14 @@
   {#if $cart.length > 0}
     <div class="cart__list">
       {#each $cart as product}
-        <CartItem data={product} />
+        <CartItem
+          data={product}
+          on:addItem={() => changeQuantity(product, 1)}
+          on:removeItem={() => changeQuantity(product, -1)}
+        />
       {/each}
     </div>
-    <div class="cart__total">Total R$ {getTotalPrice()}</div>
+    <div class="cart__total">Total R$ {total}</div>
   {:else}
     <div class="cart__no-items">
       <h3>Ainda não há items no seu carrinho.</h3>
