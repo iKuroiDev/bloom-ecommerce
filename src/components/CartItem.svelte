@@ -65,6 +65,7 @@
     padding: 0 7px;
     width: 53px;
     text-align: center;
+    flex-grow: 1;
   }
 
   .cart__button {
@@ -80,5 +81,22 @@
   .align-items-center {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .cart__item {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .cart__quantity {
+      grid-area: 2 / 1 / 3 / 2;
+      text-align: center;
+    }
+    .cart__price {
+      grid-area: 2 / 2 / 3 / 3;
+      padding: 0 25px;
+    }
   }
 </style>
