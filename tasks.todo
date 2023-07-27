@@ -12,7 +12,7 @@ Prazo: 28/07 - até 23:59
 ✔ criar store do carrinho @done(23-07-26 12:34)
 ✔ adicionar produtos ao carrinho @done(23-07-26 12:34)
 ✔ aumentar/reduzir qtde de produtos no carrinho @done(23-07-26 15:06)
-☐ remover produtos do carrinho
+✔ remover produtos do carrinho @done(23-07-26 16:27)
 ✔ calcular valor total da compra @done(23-07-26 12:34)
 ☐ responsividade
 ☐ publicar no github
@@ -21,5 +21,6 @@ Prazo: 28/07 - até 23:59
 Extras (se der tempo): 
 ☐ barra de busca
 ☐ filtro
+☐ ícone de exclusão de item no carrinho
 ☐ notificação de produto adicionado ao carrinho
 ☐ notificação de produto removido do carrinho

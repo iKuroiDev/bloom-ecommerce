@@ -12,11 +12,15 @@
     <img src={data.img} alt={data.name} />
   </div>
   <div class="product__info">
-    <div class="product__category">{data.category}</div>
-    <h3 class="product__name">{data.name}</h3>
-    <div class="product__price">{formatterCurrency.format(data.price)}</div>
-    <div class="product__btn">
-      <button on:click={() => dispatch("addItem", data)}> Comprar </button>
+    <div>
+      <div class="product__category">{data.category}</div>
+      <h3 class="product__name">{data.name}</h3>
+    </div>
+    <div>
+      <div class="product__price">{formatterCurrency.format(data.price)}</div>
+      <div class="product__btn">
+        <button on:click={() => dispatch("addItem", data)}> Comprar </button>
+      </div>
     </div>
   </div>
 </article>
@@ -26,6 +30,8 @@
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    display: flex;
+    flex-direction: column;
   }
 
   .product__image img {
@@ -34,6 +40,10 @@
 
   .product__info {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
   }
 
   .product__category {

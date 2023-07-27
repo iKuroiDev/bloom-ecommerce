@@ -46,4 +46,11 @@
     gap: 30px;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+  }
 </style>
