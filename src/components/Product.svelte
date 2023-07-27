@@ -78,5 +78,10 @@
     padding: 7px 20px;
     margin: 5px 0 18px 0;
     cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+
+  .product__btn button:hover {
+    background-color: #828282;
   }
 </style>

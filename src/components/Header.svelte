@@ -20,7 +20,9 @@
       <div class="header__cart">
         <a href="/carrinho">
           <img src="img/cart.svg" alt="Cart (1)" />
-          <div class="header__cart-badge">{cartLength}</div>
+          {#if cartLength > 0}
+            <div class="header__cart-badge">{cartLength}</div>
+          {/if}
         </a>
       </div>
     </div>

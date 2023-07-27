@@ -91,6 +91,11 @@
     background-color: #000;
     padding: 5px 10px;
     cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+
+  .cart__delete:hover {
+    background-color: #828282;
   }
 
   .cart__delete i {

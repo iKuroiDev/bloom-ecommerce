@@ -1,5 +1,5 @@
 Criação de um mini e-commerce com tela de produtos e uma tela de carrinho
-figma: https://www.figma.com/proto/UvAF5agQTkSExBTC9U1DPN/E-commerce?type=design&node-id=1-2&t=VebqlpNi7W8Beinz-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1
+figma: https://www.figma.com/proto/3455UvAF5agQTkSExBTC9U1DPN/E-commerce?type=design&node-id=1-2&t=VebqlpNi7W8Beinz-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1
 teste: https://docs.google.com/presentation/d/1gci8_gTTeGLYtJLCple_58uAnWyXBSLdYjWhs497AYA/edit#slide=id.g1e520763ed0_0_0
 
 Prazo: 28/07 - até 23:59
@@ -19,7 +19,7 @@ Prazo: 28/07 - até 23:59
 ☐ deployar na vercel
 
 Extras (se der tempo): 
-☐ barra de busca
+✔ barra de busca @done(23-07-27 18:31)
 ☐ filtro
 ✔ ícone de exclusão de item no carrinho @done(23-07-27 11:37)
 ✔ notificação de produto adicionado ao carrinho @done(23-07-27 16:59)
