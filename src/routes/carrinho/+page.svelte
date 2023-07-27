@@ -31,6 +31,7 @@
           data={product}
           on:addItem={() => changeQuantity(product, 1)}
           on:removeItem={() => changeQuantity(product, -1)}
+          on:delete={() => removeItem(product)}
         />
       {/each}
     </div>

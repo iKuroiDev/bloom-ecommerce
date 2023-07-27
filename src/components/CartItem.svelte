@@ -12,7 +12,12 @@
     <img src={data.img} alt={data.name} />
   </div>
   <h2 class="cart__name align-items-center">
-    {data.name}
+    <div>
+      {data.name}
+      <button class="cart__delete" on:click={() => dispatch("delete")}>
+        <i class="far fa-trash-alt" /> Remover
+      </button>
+    </div>
   </h2>
   <div class="cart__quantity align-items-center">
     <div class="align-items-center">
@@ -78,6 +83,20 @@
     font-size: 1.7em;
   }
 
+  .cart__delete {
+    display: block;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .cart__delete i {
+    margin-right: 5px;
+  }
+
   .align-items-center {
     display: flex;
     align-items: center;
@@ -90,13 +109,18 @@
       grid-template-rows: 1fr;
     }
 
+    .cart__name {
+      padding: 5px 15px;
+      font-size: 1.3em;
+    }
+
     .cart__quantity {
       grid-area: 2 / 1 / 3 / 2;
       text-align: center;
     }
     .cart__price {
       grid-area: 2 / 2 / 3 / 3;
-      padding: 0 25px;
+      padding: 0 15px;
     }
   }
 </style>

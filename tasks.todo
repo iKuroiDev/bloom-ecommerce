@@ -14,13 +14,13 @@ Prazo: 28/07 - até 23:59
 ✔ aumentar/reduzir qtde de produtos no carrinho @done(23-07-26 15:06)
 ✔ remover produtos do carrinho @done(23-07-26 16:27)
 ✔ calcular valor total da compra @done(23-07-26 12:34)
-☐ responsividade
+✔ responsividade @done(23-07-27 10:56)
 ☐ publicar no github
 ☐ deployar na vercel
 
 Extras (se der tempo): 
 ☐ barra de busca
 ☐ filtro
-☐ ícone de exclusão de item no carrinho
+✔ ícone de exclusão de item no carrinho @done(23-07-27 11:37)
 ☐ notificação de produto adicionado ao carrinho
 ☐ notificação de produto removido do carrinho
