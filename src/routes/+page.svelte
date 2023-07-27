@@ -70,6 +70,11 @@
       <Product data={product} on:addItem={(event) => addToCart(event.detail)} />
     {/each}
   </div>
+  {#if filteredProducts.length == 0}
+    <div class="products__not-found">
+      Não foram encontrados resultados para sua busca! Tente novamente.
+    </div>
+  {/if}
   <Notification />
 </div>
 
@@ -82,6 +87,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     width: 100%;
+  }
+
+  .products__not-found {
+    text-align: center;
   }
 
   .search__input {
