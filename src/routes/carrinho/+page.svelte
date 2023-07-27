@@ -1,7 +1,9 @@
 <!-- CART PAGE -->
 <script>
   import CartItem from "../../components/CartItem.svelte";
+  import Notification from "../../components/Notification.svelte";
   import { cart, changeQuantity, removeItem } from "../../stores/cartStore";
+  import { notifications } from "../../stores/notificationStore.js";
 
   let total = 0;
 
@@ -19,6 +21,19 @@
     total = 0;
     $cart.forEach((item) => (total += item.price * item.quantity));
   }
+
+  function deleteItem(item) {
+    removeItem(item);
+    notifications.warning(item.name + " removido do carrinho.", 2000);
+  }
+
+  function removeOneItem(item) {
+    if (item.quantity === 1) {
+      deleteItem(item);
+      return;
+    }
+    changeQuantity(item, -1);
+  }
 </script>
 
 <div class="cart">
@@ -30,8 +45,8 @@
         <CartItem
           data={product}
           on:addItem={() => changeQuantity(product, 1)}
-          on:removeItem={() => changeQuantity(product, -1)}
-          on:delete={() => removeItem(product)}
+          on:removeItem={() => removeOneItem(product)}
+          on:delete={() => deleteItem(product)}
         />
       {/each}
     </div>
@@ -43,6 +58,7 @@
     </div>
   {/if}
   <div class="cart__total">Total {formatter.format(total)}</div>
+  <Notification />
 </div>
 
 <style>

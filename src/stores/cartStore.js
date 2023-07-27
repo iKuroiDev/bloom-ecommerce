@@ -20,26 +20,9 @@ export function addItem(item) {
 
 export function changeQuantity(item, num) {
   cart.update(items => {
-    // Find the item in the cart
-    const updatedItems = items.map(i => {
-      if (i.id === item.id) {
-        // Calculate the new quantity
-        const newQuantity = i.quantity + num;
+    const updatedItems = items.map(i => i.id === item.id ? { ...i, quantity: i.quantity + num } : i);
 
-        // Remove the item from the cart if the new quantity is zero or less
-        if (newQuantity <= 0) {
-          return null;
-        }
-
-        // Update the quantity of the item
-        return { ...i, quantity: newQuantity };
-      }
-
-      return i;
-    });
-
-    // Filter out null (removed) items
-    return updatedItems.filter(i => i !== null);
+    return updatedItems;
   });
 }
 

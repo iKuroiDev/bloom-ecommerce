@@ -1,17 +1,18 @@
 <script>
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
+  import Notification from "../components/Notification.svelte";
   import "../styles/global.css";
 </script>
 
 <div class="content">
   <Header />
-  <!-- page content -->
-  <section class="page">
-    <div class="container">
+  <div class="container">
+    <section class="page">
+      <!-- page content -->
       <slot />
-    </div>
-  </section>
+    </section>
+  </div>
 
   <Footer />
 </div>
@@ -25,5 +26,7 @@
 
   .page {
     margin: 60px 0;
+    /* padding: 60px 0; */
+    position: relative;
   }
 </style>

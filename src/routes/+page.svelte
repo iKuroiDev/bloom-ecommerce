@@ -1,8 +1,9 @@
 <!-- HOME/PRODUCT PAGE -->
 <script>
+  import Notification from "../components/Notification.svelte";
   import Product from "../components/Product.svelte";
   import { addItem } from "../stores/cartStore.js";
-  import { cart } from "../stores/cartStore.js";
+  import { notifications } from "../stores/notificationStore.js";
 
   const products = [
     {
@@ -30,16 +31,23 @@
 
   function addToCart(item) {
     addItem(item);
+    notifications.success(item.name + " adicionado ao carrinho!", 2000);
   }
 </script>
 
-<div class="product-grid">
-  {#each products as product}
-    <Product data={product} on:addItem={(event) => addToCart(event.detail)} />
-  {/each}
+<div class="page">
+  <div class="product-grid">
+    {#each products as product}
+      <Product data={product} on:addItem={(event) => addToCart(event.detail)} />
+    {/each}
+  </div>
+  <Notification />
 </div>
 
 <style>
+  .page {
+    position: relative;
+  }
   .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
