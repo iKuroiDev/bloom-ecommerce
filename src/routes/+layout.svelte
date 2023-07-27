@@ -1,8 +1,10 @@
 <script>
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
-  import Notification from "../components/Notification.svelte";
+  import { fade } from "svelte/transition";
   import "../styles/global.css";
+
+  export let data;
 </script>
 
 <div class="content">
@@ -10,7 +12,11 @@
   <div class="container">
     <section class="page">
       <!-- page content -->
-      <slot />
+      {#key data.url}
+        <div in:fade={{ duration: 200 }}>
+          <slot />
+        </div>
+      {/key}
     </section>
   </div>
 
