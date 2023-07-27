@@ -29,15 +29,44 @@
     },
   ];
 
+  let searchTerm = "";
+
+  let filteredProducts = products;
+
   function addToCart(item) {
     addItem(item);
     notifications.success(item.name + " adicionado ao carrinho!", 2000);
   }
+
+  function search(input) {
+    let term = normalizeData(input);
+    filteredProducts = products.filter((item) =>
+      normalizeData(item.name).includes(term)
+    );
+  }
+
+  // search term to lowecase and replace special characters
+  function normalizeData(input) {
+    return input
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
 </script>
 
 <div class="page">
+  <div class="search">
+    <input
+      type="text"
+      class="search__input"
+      placeholder="Pesquise um produto:"
+      name="search"
+      bind:value={searchTerm}
+      on:input={() => search(searchTerm)}
+    />
+  </div>
   <div class="product-grid">
-    {#each products as product}
+    {#each filteredProducts as product}
       <Product data={product} on:addItem={(event) => addToCart(event.detail)} />
     {/each}
   </div>
@@ -52,6 +81,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    width: 100%;
+  }
+
+  .search__input {
+    margin-bottom: 30px;
+    border: solid 2px #000;
+    border-radius: 50px;
+    padding: 10px 20px;
     width: 100%;
   }
 

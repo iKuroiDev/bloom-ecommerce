@@ -4,7 +4,6 @@
   let cartLength = 0;
 
   const unsubscribe = cart.subscribe((res) => {
-    console.log(res);
     cartLength = 0;
     res.forEach((item) => (cartLength += item.quantity));
   });
